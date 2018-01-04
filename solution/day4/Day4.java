@@ -3,8 +3,6 @@ package solution.day4;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.Comparator;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.TreeMap;
@@ -55,19 +53,12 @@ public class Day4 extends AdventOfCode{
 
 	@Override
 	public void part2() {
-		Map<Character, AtomicInteger> charCount;
 		String[] rooms = this.getInput().split("\n");
-		String checksum;
 		int sectorId;
 		String encryptedName;
-		int sumSectorId = 0;
-		
 		for(String room : rooms) {
 			encryptedName = room.substring(0, room.indexOf('['));
-			checksum= room.substring(room.indexOf('[') + 1, room.indexOf(']'));
 			sectorId = getSectorId(encryptedName);
-			charCount = new TreeMap<>();
-			
 			List<Character> encryptedNameRotated = addToList(encryptedName);
 			rotateCharactersThroughAlphabet(encryptedNameRotated, sectorId);
 			
@@ -130,7 +121,6 @@ public class Day4 extends AdventOfCode{
 		List<Character> alphabetRotated;
 		
 		int positionAlphabet;
-		char character;
 		
 		for(char letter = 'a'; letter <= 'z'; letter++) {
 			alphabet.add(letter);

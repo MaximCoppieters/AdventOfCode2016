@@ -38,7 +38,28 @@ class Day7Test {
 		assertEquals("azer", view);
 		assertEquals("zert", view2);
 		assertEquals("y", view3);
-		
 	}
+	
+	@Test
+	void doesRegexCaptureGroup() throws FileNotFoundException {
+		Day7 d = new Day7();
+		
+		String line = "e[qrsntvxhtfurcgcynx]oyswvu";
+		String hypernet = d.getSequences(line, "\\[(.+?)\\]");
+		
+		assertEquals("qrsntvxhtfurcgcynx   ", hypernet, "Hypernets are captured wrongly");
+	}
+	
+	@Test
+	void doesRegexCaptureMultipleGroups() throws FileNotFoundException {
+		Day7 d = new Day7();
+		
+		String line = "ee[qrsn]oys[wvdzaadza]uaa";
+		String hypernet = d.getSequences(line, "\\[(.+?)\\]");
+		
+		assertEquals("qrsn   wvdzaadza   ", hypernet, "Hypernets are captured wrongly");
+	}
+	
+	
 
 }

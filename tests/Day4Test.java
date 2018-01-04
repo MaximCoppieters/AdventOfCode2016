@@ -9,8 +9,6 @@ import org.junit.jupiter.api.Test;
 import solution.day4.Day4;
 
 class Day4Test {
-	
-	
 	@Test
 	void test() throws FileNotFoundException {
 		Day4 day4 = new Day4();
@@ -21,7 +19,6 @@ class Day4Test {
 		for(char letter : encryptedNameRotated) {
 			System.out.print(letter);
 		}
-		
 	}
 
 }

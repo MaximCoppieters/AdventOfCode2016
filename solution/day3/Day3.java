@@ -45,9 +45,6 @@ public class Day3 extends AdventOfCode {
 	public void part2() {
 		int validCount=0;
 		String[] lines = this.getInput().split("\n");
-		int side1;
-		int side2;  
-		int side3;
 		String triangleValues[];
 		
 		List<String[]> inputValues = new ArrayList<>();

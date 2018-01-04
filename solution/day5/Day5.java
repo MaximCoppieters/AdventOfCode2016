@@ -84,6 +84,7 @@ public class Day5 extends AdventOfCode{
 		
 	}
 	
+	/*
 	private int convertHexToInt(char hex) {
 		if(hex >= '0' && hex <= '9') {
 			return (int)hex - 48;
@@ -99,5 +100,5 @@ public class Day5 extends AdventOfCode{
 			}
 		}
 	}
-
+*/
 }
